@@ -45,17 +45,38 @@ As maquinas de Turing podem ser combinadas para formarem máquinas mais evoluíd
 
 As máquinas de Turing foram propostas com a promessa de que elas podem substituir, como reconhecedores de linguagem, todos os autômatos apresentados anteriormente. Máquina de Turing são como computadores sem teclado, unidade de disco ou tela, isto é, sem um mecanismo para armazenar e recuperar informações nelas contidas. Torna-se oportuno, fixar algumas regras para a utilização das máquinas de Turing.: a cadeia de entrada, isenta de espaços em branco, é gravada à direita do símbolo >, com um espaço em branco à sua esquerda e espaços em branco à sua direita: o cabeçote é colocado na posição da fita que contém o espaço em branco entre o > e a cadeia de entrada; e a máquina é posicionada em seu estado inicial. Se M= (K, ∑,  δ, s, H) é uma máquina de Turing, e W ϵ (∑-{<img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/branco.jpg"/>, >})*, então a configuração inicial de M com entrada W é (s, >w).  Com isso podemos agora definir que a máquina de Turing como reconhecedores de linguagem.<br>
 
-Maquina que Computa divisão de um numero Binário por dois.<br>
+#### Maquina que Computa divisão de um numero Binário por dois.
+
 ```
-M = (K, ∑, δ, s, {h})<br>
-∑ = {>, #, 1, 0}<br>
-K = {s, r, t, u, v, x, h}<br>
+M = (K, ∑, δ, s, {h})
+∑ = {>, #, 1, 0}
+K = {s, r, t, u, v, x, h}
 δ = {("s",">"):("s","R"),("s","#"):("r","R"),("r","#"):("h","L"),("r","0"):("r","R"),("r","1"):("t","R"),
 ("t","0"):("u","R"),("t","1"):("u","R"),("t","#"):("x","L"),("u","0"):("u","R"),("u","1"):("u","R"),
 ("u","#"):("v","L"),("v","0"):("v","#"),("v","1"):("v","#"),("v","#"):("x","L"),("x","0"):("x","L"),
 ("x","1"):("x","L"),("x","#"):("h","#")}
 ```
 <p align="center"><img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/screenshot.23.jpg"/></p>
+
+
+#### Maquina que Computa Soma de dois numero Binário.
+```
+M = (K, ∑, δ, s, {h})
+K = {"s","t","p","q","h","z","a","a0","b0","c0","c0","a1","b1","c1","c1","a+","b+","c+","c+"}
+∑ = {>, #, 1, 0,+}
+δ = { ("s",">"):("s","R"),("s","#"):("t","R"),("t","0"):("t","R"),("t","1"):("t","R"),("t","+"):("j","R"),
+("t","#"):("h","L"),("j","0"):("j","R"),("j","1"):("g","R"),("j","#"):("n","L"),("n","0"):("k","#"),
+("k","#"):("n","L"),("n","+"):("h","#"),("g","0"):("g","R"),("g","1"):("g","R"),("g","#"):("u","L"),
+("u","0"):("v","1"),("u","1"):("v","0"),("v","1"):("u","L"),("v","0"):("x","L"),("x","0"):("x","L"),
+("x","1"):("x","L"),("x","+"):("p","L"),("p","#"):("z","1"),("p","0"):("q","1"),("p","1"):("q","0"),
+("q","0"):("p","L"),("q","1"):("m","L"),("m","0"):("m","L"),("m","1"):("m","L"),("m","#"):("s","#"),
+("z","0"):("z","R"),("z","1"):("z","R"),("z","+"):("z","R"),("z","#"):("a","L"),("a","0"):("a0","#"),
+("a","1"):("a1","#"),("a","+"):("a+","#"),("a0","#"):("b0","R"),("b0","#"):("c0","0"),("c0","0"):("c0","L"),
+("c0","#"):("a","L"),("a1","#"):("b1","R"),("b1","#"):("c1","1"),("c1","1"):("c1","L"),("c1","#"):("a","L"),
+("a+","#"):("b+","R"),("b+","#"):("c+","+"), ("c+","+"):("c+","L"),("c+","#"):("a","L"),("a",">"):("s","R")}
+```
+<p align="center"><img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/screenshot.27.jpg"/></p>
+
 
 ### Instalação
 
