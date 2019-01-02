@@ -46,11 +46,15 @@ As maquinas de Turing podem ser combinadas para formarem máquinas mais evoluíd
 As máquinas de Turing foram propostas com a promessa de que elas podem substituir, como reconhecedores de linguagem, todos os autômatos apresentados anteriormente. Máquina de Turing são como computadores sem teclado, unidade de disco ou tela, isto é, sem um mecanismo para armazenar e recuperar informações nelas contidas. Torna-se oportuno, fixar algumas regras para a utilização das máquinas de Turing.: a cadeia de entrada, isenta de espaços em branco, é gravada à direita do símbolo >, com um espaço em branco à sua esquerda e espaços em branco à sua direita: o cabeçote é colocado na posição da fita que contém o espaço em branco entre o > e a cadeia de entrada; e a máquina é posicionada em seu estado inicial. Se M= (K, ∑,  δ, s, H) é uma máquina de Turing, e W ϵ (∑-{<img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/branco.jpg"/>, >})*, então a configuração inicial de M com entrada W é (s, >w).  Com isso podemos agora definir que a máquina de Turing como reconhecedores de linguagem.<br>
 
 Maquina que Computa divisão de um numero Binário por dois.<br>
+```
 M = (K, ∑, δ, s, {h})<br>
 ∑ = {>, #, 1, 0}<br>
 K = {s, r, t, u, v, x, h}<br>
-δ = {("s",">"):("s","R"),("s","#"):("r","R"),("r","#"):("h","L"),("r","0"):("r","R"),("r","1"):("t","R"),("t","0"):("u","R"),("t","1"):("u","R"),("t","#"):("x","L"),("u","0"):("u","R"),("u","1"):("u","R"),("u","#"):("v","L"),("v","0"):("v","#"),("v","1"):("v","#"),("v","#"):("x","L"),("x","0"):("x","L"),("x","1"):("x","L"),("x","#"):("h","#")}
-
+δ = {("s",">"):("s","R"),("s","#"):("r","R"),("r","#"):("h","L"),("r","0"):("r","R"),("r","1"):("t","R"),
+("t","0"):("u","R"),("t","1"):("u","R"),("t","#"):("x","L"),("u","0"):("u","R"),("u","1"):("u","R"),
+("u","#"):("v","L"),("v","0"):("v","#"),("v","1"):("v","#"),("v","#"):("x","L"),("x","0"):("x","L"),
+("x","1"):("x","L"),("x","#"):("h","#")}
+```
 <p align="center"><img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/screenshot.23.jpg"/></p>
 
 ### Instalação
