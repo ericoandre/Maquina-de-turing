@@ -13,10 +13,12 @@ Apresentando uma definição formal para a máquina de Turing, podemos entender 
 <li>K é um conjunto finito de estados;</li>
 <li>∑ é o alfabeto de entrada, que contém o símbolo de espaço em branco  e o símbolo de extremidade esquerda >, mas que não contém os símbolos → e ←;</li>
 <li>s ϵ K é o seu estado inicial;</li> 
-<li><img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/terminal.png"/> ⸦ K é o conjunto de estados de parada;</li></ul>
- δ, a função de transição, é uma função de (K-H) x ∑ para K x (∑ U {→, ←}), tal que,
-(a)Para todos os q ϵ K- H, se δ (q, >) = (p, b), então b = →
-(b)Para todos os q ϵ K- H e a ϵ ∑, se δ(q, a) = (p, b), então b ≠ >.
+<li><img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/terminal.png"/> ⸦ K é o conjunto de estados de parada;</li>
+<li>δ, a função de transição, é uma função de (K-H) x ∑ para K x (∑ U {→, ←}), tal que,</li>
+<ul><li>(a)Para todos os q ϵ K- H, se δ (q, >) = (p, b), então b = →</li>
+<li>(b)Para todos os q ϵ K- H e a ϵ ∑, se δ(q, a) = (p, b), então b ≠ >.</li></ul>
+ 
+ </li></ul>
 
 <p align="center"><img alt="" src="https://github.com/ericoandre/Maquina-de-turing-pygame/blob/master/maquina.jpg"/></p>
 
