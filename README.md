@@ -83,7 +83,7 @@ K = {"s","t","p","q","h","z","a","a0","b0","c0","c0","a1","b1","c1","c1","a+","b
 Requer [Python 3.5](https://www.python.org/ftp/python/3.7.2/python-3.7.2.exe) ou superior.
 
 ```sh
-$ git clone https://github.com/ericoandre/Maquina-de-turing-pygame.git
+$ git clone https://github.com/ericoandre/Maquina-de-turing.git
 $ cd Maquina-de-turing-pygame
 $ pip install pygame
 $ cd Maquina de turing pygame
